@@ -1,0 +1,139 @@
+ HIVE
+A história do Apache Hive está intrinsecamente ligada à necessidade do Facebook de processar volumes massivos de dados no final dos anos 2000, quando o Hadoop tradicional (MapReduce) tornou-se muito complexo e lento para consultas rápidas.
+Aqui está a trajetória detalhada do Hive:
+1. Origem no Facebook (2007-2008) 
+•	O Problema: Por volta de 2007-2008, o Facebook estava experimentando um crescimento explosivo de dados. As ferramentas tradicionais de SQL não conseguiam lidar com os dados armazenados no HDFS (Hadoop Distributed File System) e escrever tarefas MapReduce em Java para cada consulta era lento, complexo e exigia muitos engenheiros.
+•	A Criação: Joydeep Sen Sarma e Ashish Thusoo, engenheiros do Facebook, conceberam o Hive para preencher essa lacuna.
+•	O Objetivo: Criar uma ferramenta que permitisse o uso de SQL (chamado HiveQL ou HQL) para consultar dados no Hadoop, tornando o Big Data acessível a analistas que conheciam SQL, sem precisar aprender Java MapReduce.
+•	Lançamento: O Hive foi desenvolvido internamente e posteriormente lançado como um projeto de código aberto (open source) sob a fundação Apache. 
+2. Adoção pela Apache Software Foundation (2010)
+•	O projeto foi doado para a Apache Software Foundation em 2010, tornando-se um projeto de código aberto de nível superior (top-level project).
+•	Isso permitiu que outras empresas, como Netflix, Amazon e a comunidade em geral, contribuíssem para o seu desenvolvimento. 
+3. Evolução e Funcionalidades
+•	Metastore: O Hive introduziu o "Hive Metastore", um repositório centralizado para armazenar metadados sobre as tabelas (estrutura, partições, localizações), o que facilitou a gestão de dados estruturados e semiestruturados.
+•	SQL no Hadoop: Ele traduz consultas baseadas em SQL (HiveQL) em tarefas MapReduce, TeZ ou Spark para execução.
+•	Evolução de Performance: Com o tempo, o Hive evoluiu para suportar o Hive LLAP (Live Long and Process), que oferece consultas em tempo real, além de suportar formatos de arquivo colunares como ORC e Parquet para otimizar leitura. 
+4. O Hive Hoje
+•	O Apache Hive continua a ser uma das principais ferramentas para data warehousing no ecossistema Hadoop, permitindo o armazenamento de petabytes de dados e o uso de SQL sobre eles.
+•	Ele é amplamente utilizado em nuvens como Amazon EMR, que mantém uma versão compatível do Hive. 
+Em resumo, o Hive foi criado para trazer a facilidade do SQL para o mundo complexo do Big Data no Hadoop, nascendo no Facebook para resolver problemas de escala em 2008 e evoluindo para um padrão da indústria sob a Apache.         
+SISTEMAS OPERACIONAIS SUPORTADOS:
+
+O Apache Hive é uma ferramenta de data warehousing construída sobre o Apache Hadoop e, como tal, é projetada para rodar principalmente em ambientes de produção baseados em sistemas operacionais Unix. 
+Os principais sistemas operacionais suportados são:
+•	Linux (Ambiente de Produção Recomendado): O Hive é amplamente utilizado e testado em distribuições Linux, incluindo Ubuntu, Red Hat Enterprise Linux (RHEL), CentOS e SUSE.
+•	Windows: O Hive pode ser executado no Windows, geralmente para desenvolvimento ou testes, mas requer configurações adicionais (como o uso de ferramentas compatíveis com POSIX, por exemplo, o Cygwin, ou binários do Windows como winutils.exe para Hadoop).
+•	macOS: Funciona como um ambiente de desenvolvimento comum. 
+
+
+
+Requisitos Principais para o Sistema Operacional:
+1.	Java (JDK/JRE): O Hive exige Java (geralmente Java 8 ou superior nas versões mais recentes).
+2.	Hadoop: O sistema operacional deve suportar uma instalação funcional do Apache Hadoop (HDFS/YARN). 
+
+Ambientes Gerenciados:
+O Apache Hive é comumente executado no Azure HDInsight e Amazon EMR, que abstraem o sistema operacional subjacente, mas utilizam Linux (geralmente baseado em Debian ou RHEL).
+
+
+        PAGO OU NÃO?
+
+O Apache Hive é um software de código aberto (open-source) gratuito, licenciado sob a Apache License 2.0. Isso significa que você não paga licença para baixar, instalar ou usar o Apache Hive. 
+Aqui estão os pontos principais sobre o custo do Hive:
+•	Software Gratuito: O Apache Hive é um projeto da Apache Software Foundation, gratuito para uso comercial e pessoal.
+•	Custo de Infraestrutura: Embora o software seja gratuito, o Hive precisa ser executado sobre um cluster Chador (como HDFS), o que gera custos de infraestrutura (servidores, armazenamento na nuvem, manutenção).
+•	Serviços Gerenciados: Empresas como Amazon (AWS), Databricks ou Cloudera oferecem o Hive como parte de suas plataformas de Big Data, e esses serviços gerenciados podem ter custos baseados no uso. 
+EMPRESAS QUE UTILIZAM O SISTEMA HIVE?
+
+O Apache Hive é um sistema de data warehouse distribuído, muito utilizado para gerenciar e consultar grandes volumes de dados (Big Data) baseados em Hadoop. Ele foi originalmente criado no Facebook e é adotado por grandes empresas que lidam com análises complexas. 
+Aqui estão algumas das principais empresas que utilizam ou já utilizaram o Apache Hive: 
+•	Facebook (Meta): Desenvolvedor original do Hive para gerenciar seus imensos volumes de dados de usuários.
+•	Netflix: Utiliza para processar e analisar dados em larga escala.
+•	Amazon: Mantém uma "fork" (versão própria) do Apache Hive no Amazon EMR (Elastic MapReduce) para análise em S3.
+•	FINRA (Financial Industry Regulatory Authority): Utiliza Hive no Amazon EMR para monitorar até 90 bilhões de eventos de negociação.
+•	Vanguard: A maior provedora de fundos mútuos utiliza o Hive para análise de dados em nuvem.
+•	AT&T: Utiliza em suas operações de telecomunicações.
+•	Banco Itaú: Utiliza para serviços bancários e financeiros no Brasil.
+•	Royal Bank of Canada (RBC): Utiliza para análise de serviços financeiros.
+•	Outras grandes empresas: Walmart, Apple, Visa, Capital One e Oracle também constam como usuárias da tecnologia. 
+Como pode ser visto, empresas de grandes nomes e grandes relevâncias no meio digital utiliza o sistema de banco digital HIVE.
+
+
+
+   ESTUDOS DO CASO:
+
+NETFLIX
+
+O Apache Hive foi fundamental para a Netflix ao atuar como o alicerce do seu 
+data warehouse (armazém de dados) em grande escala, permitindo que a empresa transformasse um volume massivo de informações brutas de usuários em insights estratégicos. Ao longo de sua trajetória, a Netflix utilizou o Hive para gerenciar centenas de petabytes de dados, o que possibilitou a personalização da experiência, o aprimoramento da qualidade do streaming e decisões baseadas em dados. 
+Aqui estão as principais formas como o Hive ajudou a transformar a Netflix:
+•	Tomada de Decisão baseada em Dados (Data-Driven): O Hive permitiu à Netflix processar dados de mais de 200 milhões de assinantes, analisando o que assistiam, quando pausavam e o que não terminavam de ver. Isso foi crucial para decidir quais produções originais (como House of Cards) produzir, reduzindo riscos financeiros.
+•	Recomendação Personalizada: Com o uso do Hive para consultar grandes conjuntos de dados (Big Data), a Netflix conseguiu aprimorar seu algoritmo de recomendação, garantindo que cerca de 80% do conteúdo consumido fosse influenciado por sugestões personalizadas, mantendo o usuário engajado.
+•	Otimização da Infraestrutura: O Hive, construído sobre o Hadoop/S3, permitiu que engenheiros analisassem de forma eficiente o comportamento do usuário para otimizar o streaming e a qualidade da imagem, mesmo em diferentes dispositivos e países.
+•	Marketing e Capas Personalizadas: A Netflix utilizou dados armazenados no Hive para selecionar a capa mais atraente para cada usuário, aumentando a probabilidade de cliques e visualizações. 
+A Evolução para o Apache Iceberg
+Apesar de ter sido central no crescimento, a Netflix encontrou limitações no Hive (como a falta de transações atômicas e desafios de consistência em altíssima escala). Isso levou os engenheiros da Netflix a criarem o Apache Iceberg, que substituiu o formato de tabela do Hive para garantir maior confiabilidade e desempenho, aproveitando a arquitetura que o Hive ajudou a construir. 
+
+FACEBOOK
+O Apache Hive foi fundamental para o crescimento do Facebook (agora Meta) ao resolver a incapacidade das ferramentas tradicionais de lidar com o volume massivo de dados gerado pela rede social. Desenvolvido internamente no Facebook e posteriormente doado à Apache Software Foundation, o Hive permitiu que engenheiros e analistas consultassem petabytes de dados usando uma linguagem familiar, o SQL, sem precisar escrever códigos complexos de MapReduce. 
+
+Aqui está como o Apache Hive ajudou o Facebook a se tornar uma gigante:
+•	Democratização dos Dados (SQL no Hadoop): Antes do Hive, o processamento de dados no Hadoop exigia conhecimento avançado em Java/MapReduce. O Hive introduziu o HiveQL (SQL-like), permitindo que analistas de negócios, cientistas de dados e engenheiros utilizassem seus conhecimentos de SQL para interrogar o "data warehouse" do Facebook.
+•	Escalabilidade Massiva (Data Warehousing): À medida que o Facebook crescia, as soluções de banco de dados tradicionais (como Oracle) falhavam. O Hive foi construído sobre o Hadoop Distributed File System (HDFS), o que permitiu ao Facebook armazenar e gerenciar centenas de petabytes de dados (historicamente chegando a mais de 300 PB) de forma eficiente e de baixo custo.
+•	Decisões Baseadas em Dados (Data-Driven): Com o Hive, o Facebook conseguiu realizar análises ad-hoc rapidamente. Isso facilitou o entendimento de comportamentos dos usuários, a otimização de algoritmos de recomendação (como "pessoas que você talvez conheça") e a melhoria do engajamento na plataforma.
+•	Eficiência na Monetização (Anúncios): A análise de dados de publicidade e o desempenho de anúncios foram aprimorados com o uso do Hive. Ele permitiu que a equipe de engenharia analise dados de anúncios quase em tempo real, impulsionando a receita, que é o principal motor de crescimento da empresa.
+•	Processamento Eficiente de Logs: O Hive foi concebido para transformar grandes volumes de logs de usuários em tabelas estruturadas, o que facilitou a estruturação de dados não estruturados gerados diariamente. 
+
+
+
+AMAZON
+Apache Hive ajudou a Amazon a se tornar uma gigante do comércio eletrônico e da tecnologia ao permitir a análise de petabytes de dados (big data) de forma eficiente, escalável e com custo reduzido, utilizando SQL em vez de códigos complexos MapReduce. O Hive é parte fundamental do Amazon EMR (Elastic MapReduce) na AWS, facilitando a criação de Data Lakes e a tomada de decisões baseada em dados. 
+
+Principais formas como o Hive ajudou a Amazon:
+•	Processamento de Big Data com SQL: O Hive permitiu que analistas e engenheiros da Amazon utilizassem o HiveQL (similar ao SQL) para consultar dados estruturados e semiestruturados no ecossistema Hadoop, tornando o Big Data acessível a uma equipe mais ampla.
+•	Gestão de Dados em Escala (Data Lake): Integrado ao Amazon S3 e EMR, o Hive funciona como uma estrutura de data warehouse, organizando grandes volumes de dados (armazenamento e processamento) necessários para as operações diárias, como a rastreamento de estoques.
+•	Otimização de Custos e Desempenho: O Hive suporta particionamento e bucketing, recursos que aceleram o tempo de consulta ao escanear apenas subconjuntos relevantes de dados, reduzindo os custos de processamento no EMR.
+•	Integração com AWS: O Hive é nativamente suportado no Amazon EMR, permitindo a criação rápida de clusters gerenciados e a integração com outros serviços como o AWS Glue Data Catalog para metadados.
+BANCO ITAÚ
+O Apache Hive desempenhou um papel fundamental na transformação digital e de dados do Banco Itaú, permitindo que a instituição financeira gerenciasse e analisasse petabytes de dados de forma eficiente. O Hive atuou como um "Data Warehouse" sobre o ecossistema Hadoop, facilitando o uso de consultas SQL em Big Data. 
+
+
+Veja como o Apache Hive ajudou o Itaú a se destacar:
+•	Democratização dos Dados e Agilidade: Antes da modernização, os cientistas de dados do Itaú esperavam até 6 meses para obter recursos. Com ferramentas como o Hive, o banco pôde descentralizar o acesso aos dados, permitindo que analistas e engenheiros de dados utilizassem SQL (via HiveQL) para consultar grandes volumes de dados sem depender de equipes especializadas em programação complexa (MapReduce).
+•	Análise de Big Data (Volume, Velocidade, Variedade): O Hive permitiu que o banco tratasse dados que, devido à sua complexidade e escala, seriam descartados. Isso é crucial para o "Data Lake" do banco, permitindo análise de dados históricos e comportamentais para personalizar serviços.
+•	Apoio à Transição para Nuvem (AWS): Como parte da estratégia de migrar 60% dos sistemas para a nuvem AWS até 2024, o Hive funcionou em conjunto com outras tecnologias para suportar a infraestrutura de dados moderna do banco. O uso do Hive facilitou a transição de um Data Lake centralizado para uma arquitetura de dados mais moderna.
+•	Melhoria na Tomada de Decisão: Ao usar Hive para processar grandes volumes de dados, o Itaú aumentou a velocidade e a eficiência dos negócios, permitindo decisões baseadas em dados (data-driven) mais rápidas.
+•	Integração com ecossistema Spark/Hadoop: O Hive no Itaú foi utilizado não apenas como armazenamento, mas em conjunto com motores de computação de alta velocidade, como Spark e Tez, otimizando o processamento de consultas complexas. 
+                  VANTAGENS E
+     DESVANTAGENS
+
+Vantagens do Apache Hive:
+•	Familiaridade com SQL: Permite que usuários familiarizados com SQL analisem grandes conjuntos de dados sem precisar escrever código MapReduce complexo.
+•	Escalabilidade e Desempenho em Batch: Projetado para lidar com petabytes de dados, distribuindo a carga de trabalho no cluster Hadoop.
+•	Flexibilidade (Schema-on-Read): O esquema é aplicado na leitura, não na gravação, facilitando o carregamento rápido de dados não estruturados ou semiestruturados.
+•	Integração com Ecossistema: Integra-se bem com Hadoop, Spark e ferramentas de BI.
+•	Suporte a ACID: As versões mais recentes suportam transações ACID (inserção, atualização, exclusão). 
+•	Desvantagens do Apache Hive:
+•	Alta Latência (Não é Real-Time): Devido à sua arquitetura baseada no MapReduce, não é adequado para consultas interativas ou aplicações em tempo real.
+•	Desempenho Inferior: Mais lento que bancos de dados modernos de SQL distribuído (como Impala ou Presto).
+•	Complexidade no Gerenciamento: O particionamento excessivo pode levar à criação de muitos arquivos pequenos, prejudicando o desempenho.
+•	Limitado a cargas OLAP: O Hive é focado em processamento analítico, não em transações frequentes de leitura/gravação (OLTP)
+
+
+Vantagens (Ocultas ou Subestimadas)
+•	Esquema na Leitura (Schema on Read) Flexível: Diferente de bancos relacionais (SQL) que exigem estrutura definida para inserir dados, o Hive permite "jogar" dados brutos (logs, JSON, CSV) no HDFS e definir a estrutura na hora da consulta. Isso é crucial para dados não estruturados que mudam frequentemente.
+•	Armazenamento em Formatos Colunares (ORC/Parquet): O Hive brilha com formatos colunares. Ao usar ORC (Optimized Row Columnar), o Hive reduz drasticamente o I/O de leitura, lendo apenas as colunas necessárias e aplicando compressão eficiente, o que reduz custos de armazenamento.
+•	Particionamento e "Bucketing" (Organização Física): Mais que um banco, o Hive organiza dados como diretórios no HDFS. O uso correto de partições (ex: por data) e bucketing (distribuição baseada em hash) permite que consultas ignorem 90% dos dados desnecessários (partition pruning), acelerando drasticamente consultas em grandes volumes.
+•	Compatibilidade com Motores Rápido (Tez/Spark): O Hive não depende apenas do MapReduce lento. Pode usar o Apache Tez ou Spark como motor de execução, reduzindo a latência para consultas analíticas mais rápidas. 
+
+Desvantagens (Críticas e Geralmente Ignoradas)
+
+•	O Problema dos "Arquivos Pequenos" (Small Files Problem): Esta é a principal causa de lentidão no Hive. Muitos arquivos pequenos no HDFS criam metadados excessivos no NameNode, fazendo o Hive gastar mais tempo iniciando tarefas (overhead) do que processando dados.
+•	Alta Latência (Batch Only): O Hive é otimizado para OLAP (análise) e não OLTP (transações). Não espere respostas em milissegundos. Ele não é projetado para consultas interativas rápidas, mas sim para relatórios de longa duração.
+•	Complexidade no Gerenciamento de Metastore: O Hive depende de um metastore (banco SQL) para guardar a estrutura das tabelas. Se esse banco estiver lento ou corrompido, todo o ambiente de Big Data para.
+•	As "Joins" Podem Derrubar o Cluster: Joins entre tabelas grandes sem otimização (como o MapJoin para tabelas pequenas) podem causar erros de memória (Out of Memory) ou dados desbalanceados (data skew), onde uma máquina faz todo o trabalho.
+•	Atualizações ACID Imaturas: Embora o Hive suporte ACID (transações) para UPDATEs e DELETEs, ele não é um banco transacional. O uso frequente dessas operações gera arquivos delta que exigem processos de "compactação" (compaction) constantes para manter a performance, aumentando a carga administrativa. 
+
+Lucas Rodrigues Tarifa; 
+Nicolas Domeneghetti Bertazzoni; 
+Carlos Eduardo Felix;
+Jorge Miguel Simonette Ramazzini.
